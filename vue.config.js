@@ -1,5 +1,9 @@
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production'
-    ? '/REPO_NAME/'
-    : '/'
+  configureWebpack: {
+    performance: {
+      hints: 'warning',
+      maxEntrypointSize: 1024000, // 1MB
+      maxAssetSize: 1024000      // 1MB
+    }
+  }
 }
