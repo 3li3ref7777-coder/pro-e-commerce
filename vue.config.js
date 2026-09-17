@@ -1,9 +1,10 @@
 module.exports = {
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/pro-e-commerce/' 
+    : '/',
   configureWebpack: {
     performance: {
-      hints: 'warning',
-      maxEntrypointSize: 1024000, // 1MB
-      maxAssetSize: 1024000      // 1MB
+      hints: false
     }
   }
 }
